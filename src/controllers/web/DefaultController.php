@@ -10,4 +10,18 @@ class DefaultController extends WebController
     {
         return $this->render('index');
     }
+
+    public function actionHi($name)
+    {
+        $welcome = "Hi, welcome " . $name;
+
+        return $this->render('hi', ['welcome' => $welcome]);
+    }
+
+    public function actionCalc($a,$b)
+    {
+        $total = $a + $b;
+
+        return $this->render('calc', ['total' => $total]);
+    }
 }
