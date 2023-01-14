@@ -15,7 +15,7 @@ class Module extends \portalium\base\Module
     
     public static function moduleInit()
     {
-        self::registerTranslation('template','@uguryildiz/todo/messages',[
+        self::registerTranslation('todo','@uguryildiz/todo/messages',[
             'todo' => 'todo.php',
         ]);
     }
