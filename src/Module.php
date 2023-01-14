@@ -1,6 +1,6 @@
 <?php
 
-namespace portalium\template;
+namespace uguryildiz\todo;
 
 class Module extends \portalium\base\Module
 {
@@ -8,20 +8,20 @@ class Module extends \portalium\base\Module
         [
             'class' => 'yii\rest\UrlRule',
             'controller' => [
-                'template/default',
+                'todo/default',
             ]
         ],
     ];
     
     public static function moduleInit()
     {
-        self::registerTranslation('template','@portalium/template/messages',[
-            'template' => 'template.php',
+        self::registerTranslation('template','@uguryildiz/todo/messages',[
+            'todo' => 'todo.php',
         ]);
     }
 
     public static function t($message, array $params = [])
     {
-        return parent::coreT('template', $message, $params);
+        return parent::coreT('todo', $message, $params);
     }
 }
